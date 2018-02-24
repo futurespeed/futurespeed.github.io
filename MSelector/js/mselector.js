@@ -41,13 +41,13 @@ window.MSelector = (function(){
 				'<div class="content-wrapper"><div class="content-selected"></div><div class="content"></div></div>' +
 				'</div>';
 		this._element.style.display = 'none';
-		this._element.querySelector('.ok').addEventListener('touchstart', function(){
+		this._element.querySelector('.ok').addEventListener('click', function(){
 			if(that.onselected){
 				that.onselected(that.selectedData);
 			}
 			that.hide();
 		});
-		this._element.querySelector('.cancel').addEventListener('touchstart', function(){that.hide();});
+		this._element.querySelector('.cancel').addEventListener('click', function(){that.hide();});
 
 
 		var that = this;
